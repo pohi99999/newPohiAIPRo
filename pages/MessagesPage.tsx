@@ -1,18 +1,18 @@
 // pages/MessagesPage.tsx
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { useLocale } from '../../LocaleContext';
+import { useLocale } from '../LocaleContext'; // JAVÍTVA: ../LocaleContext
 import { useAppContext } from '../App';
-import PageTitle from '../../components/PageTitle';
-import Card from '../../components/Card';
-import Button from '../../components/Button';
-import Textarea from '../../components/Textarea';
-import LoadingSpinner from '../../components/LoadingSpinner';
-import AiFeatureButton from '../../components/AiFeatureButton';
-import NewConversationModal from '../../components/NewConversationModal';
-import { Conversation, ChatMessage, MockCompany, UserRole } from '../../types';
+import PageTitle from '../components/PageTitle'; // JAVÍTVA: ../components/PageTitle
+import Card from '../components/Card'; // JAVÍTVA: ../components/Card
+import Button from '../components/Button'; // JAVÍTVA: ../components/Button
+import Textarea from '../components/Textarea'; // JAVÍTVA: ../components/Textarea
+import LoadingSpinner from '../components/LoadingSpinner'; // JAVÍTVA: ../components/LoadingSpinner
+import AiFeatureButton from '../components/AiFeatureButton'; // JAVÍTVA: ../components/AiFeatureButton
+import NewConversationModal from '../components/NewConversationModal'; // JAVÍTVA: ../components/NewConversationModal
+import { Conversation, ChatMessage, MockCompany, UserRole } from '../types'; // JAVÍTVA: ../types
 import { EnvelopeIcon, SparklesIcon, PaperAirplaneIcon, ChatBubbleBottomCenterTextIcon, PlusIcon } from '@heroicons/react/24/outline';
-import { CONVERSATIONS_STORAGE_KEY, MESSAGES_STORAGE_KEY, MOCK_COMPANIES_STORAGE_KEY } from '../../constants';
-import { ai } from '../../lib/gemini';
+import { CONVERSATIONS_STORAGE_KEY, MESSAGES_STORAGE_KEY, MOCK_COMPANIES_STORAGE_KEY } from '../constants'; // JAVÍTVA: ../constants
+import { ai } from '../lib/gemini'; // JAVÍTVA: ../lib/gemini
 import { GenerateContentResponse } from '@google/genai';
 
 export const MessagesPage: React.FC = () => {
